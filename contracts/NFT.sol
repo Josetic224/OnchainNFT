@@ -10,6 +10,7 @@ contract OnChainNFT is ERC721, Ownable {
     using Strings for uint256;
 
     uint256 private _tokenIdCounter;
+    uint256 owner;
 
     constructor() ERC721("OliveNFT", "NFT") Ownable(msg.sender) {}
 
