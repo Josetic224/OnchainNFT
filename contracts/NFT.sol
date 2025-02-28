@@ -14,7 +14,7 @@ contract OnChainNFT is ERC721, Ownable {
 
     constructor() ERC721("OliveNFT", "NFT") Ownable(msg.sender) {}
 
-    function mint() public {
+    function mint() public onlyOwner {
         _tokenIdCounter += 1;
         _safeMint(msg.sender, _tokenIdCounter);
     }
